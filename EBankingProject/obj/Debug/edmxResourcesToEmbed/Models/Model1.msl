@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OnlineEbankingModelStoreContainer" CdmEntityContainer="OnlineEbankingEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="AccountNO" ColumnName="AccountNO" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="AccountDate" ColumnName="AccountDate" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="DocId" ColumnName="DocId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountTypes">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.AccountType">
+        <MappingFragment StoreEntitySet="AccountType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TypeOfAccount" ColumnName="TypeOfAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BalanceEnquiries">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.BalanceEnquiry">
+        <MappingFragment StoreEntitySet="BalanceEnquiry">
+          <ScalarProperty Name="BalId" ColumnName="BalId" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="CurrentBalance" ColumnName="CurrentBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="branches">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.branch">
+        <MappingFragment StoreEntitySet="branch">
+          <ScalarProperty Name="branchId" ColumnName="branchId" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChangeofAddresses">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.ChangeofAddress">
+        <MappingFragment StoreEntitySet="ChangeofAddress">
+          <ScalarProperty Name="ChangeId" ColumnName="ChangeId" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="OldAddress" ColumnName="OldAddress" />
+          <ScalarProperty Name="NewAddress" ColumnName="NewAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeReqs">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.ChequeReq">
+        <MappingFragment StoreEntitySet="ChequeReq">
+          <ScalarProperty Name="ChecqueId" ColumnName="ChecqueId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="CnicNo" ColumnName="CnicNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestofChequeBooks">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.RequestofChequeBook">
+        <MappingFragment StoreEntitySet="RequestofChequeBook">
+          <ScalarProperty Name="ReqCheqid" ColumnName="ReqCheqid" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="LeavesofCheque" ColumnName="LeavesofCheque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StopPaymentofCheques">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.StopPaymentofCheque">
+        <MappingFragment StoreEntitySet="StopPaymentofCheque">
+          <ScalarProperty Name="StopPaymentId" ColumnName="StopPaymentId" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="StopPayment" ColumnName="StopPayment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.Transaction">
+        <MappingFragment StoreEntitySet="Transactions">
+          <ScalarProperty Name="TransId" ColumnName="TransId" />
+          <ScalarProperty Name="TransferAmount" ColumnName="TransferAmount" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="SenderAccountNum" ColumnName="SenderAccountNum" />
+          <ScalarProperty Name="RecieverAccountNum" ColumnName="RecieverAccountNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwAccTrans">
+      <EntityTypeMapping TypeName="OnlineEbankingModel.vwAccTran">
+        <MappingFragment StoreEntitySet="vwAccTrans">
+          <ScalarProperty Name="RecieverAccountNum" ColumnName="RecieverAccountNum" />
+          <ScalarProperty Name="SenderAccountNum" ColumnName="SenderAccountNum" />
+          <ScalarProperty Name="TransferAmount" ColumnName="TransferAmount" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="TransId" ColumnName="TransId" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="AccountNO" ColumnName="AccountNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
